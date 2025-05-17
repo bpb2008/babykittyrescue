@@ -4,9 +4,13 @@ import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   return (
-    <header>
+    <header className="w-full">
       <Link to="/">
-        <img className="border-red-500" /> {/* Add your logo here */}
+        <img
+          className="my-[20px] w-[170px] h-[170px] object-cover mx-auto"
+          src="/Baby_Kitty_Logo.png"
+          alt="Baby Kitty Rescue Logo"
+        />
       </Link>
       <NavBar />
     </header>

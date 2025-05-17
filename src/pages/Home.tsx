@@ -7,11 +7,8 @@ const Home: React.FC = () => {
       <Header />
       <figure>
         <img />
-        <p>Pretend there is a picture here for now.</p>
       </figure>
-      <main>
-        <p>Insert slidy thing and other stuff here!</p>
-      </main>
+      <main></main>
     </div>
   );
 };
