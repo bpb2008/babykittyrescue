@@ -1,17 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
-import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Adopt from "./pages/Adopt";
 import Volunteer from "./pages/Volunteer";
 import Donate from "./pages/Donate";
-import Contact from "./pages/Contact";
+import Resources from "./pages/Resources";
 
 const App: React.FC = () => {
   return (
     <Router>
-      <NavBar />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -19,7 +17,7 @@ const App: React.FC = () => {
           <Route path="/adopt" element={<Adopt />} />
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/donate" element={<Donate />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="resources" element={<Resources />} />
         </Routes>
       </main>
     </Router>
