@@ -37,19 +37,25 @@ const Home: React.FC = () => {
             </p>
           </div>
         </div>
-        <div>
+        <div className="flex flex-row">
           <Donation />
-          <div className="bg-[]">
-            <div>
-              <h3>Kitten Care & Medical Support</h3>
+          <div className="bg-[#DCCAE3] px-[100px] py-[100px]">
+            <div className="mb-[20px]">
+              <img />
+              <h3 className="font-bold mb-[10px]">
+                Kitten Care & Medical Support
+              </h3>
               <p>
                 With your support, we can provide the best quality care for our
                 kittens. This includes: medical expenses, kitten milk
                 replacement (KMR) formula, kitten food, litter, and toys.
               </p>
             </div>
-            <div>
-              <h3>Shelter Housing & Supplies</h3>
+            <div className="mb-[20px]">
+              <img />
+              <h3 className="font-bold mb-[10px]">
+                Shelter Housing & Supplies
+              </h3>
               <p>
                 Additionally, your generous support will help us keep our
                 facilities up and running. This will ensure that we can provide
@@ -57,7 +63,8 @@ const Home: React.FC = () => {
               </p>
             </div>
             <div>
-              <h3>Operations & Equipment</h3>
+              <img />
+              <h3 className="font-bold mb-[10px]">Operations & Equipment</h3>
               <p>
                 Lastly, your donation can help us to purchase equipment and hire
                 staff to continue improving our operations and ensuring that we
