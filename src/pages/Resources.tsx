@@ -7,8 +7,8 @@ const Resources: React.FC = () => {
   return (
     <div className="flex flex-col">
       <Header />
+      <section className="h-screen bg-[url('/kittens_in_basket.jpg')] grayscale-80 bg-cover bg-center bg-fixed"></section>
       <div className="flex flex-col items-center">
-        <figure>Insert pic here!</figure>
         <main className="bg-[#f5f2f8] w-full flex flex-row justify-between px-[100px]">
           <div className="flex flex-col gap-[30px]">
             <Link to="/resources/feeding">
