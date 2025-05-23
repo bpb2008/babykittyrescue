@@ -6,10 +6,8 @@ const Home: React.FC = () => {
   return (
     <div>
       <Header />
-      <figure>
-        <img />
-      </figure>
-      <main>
+      <section className="h-screen bg-[url('/kittens_in_basket.jpg')] grayscale-80 bg-cover bg-center bg-fixed"></section>
+      <main className="bg-white">
         <div>
           <p>Insert embedded video here!</p>
         </div>
