@@ -1,23 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Donation: React.FC = () => {
-  // Need the right embedded code from Donorbox
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://donorbox.org/widget.js";
+    script.setAttribute("paypalExpress", "false");
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: `
-        <iframe src="https://donorbox.org/embed/your-form-id" 
-          height="900px" 
-          width="100%" 
-          style="max-width: 500px; min-width: 310px; max-height:none!important" 
-          seamless="seamless" 
-          name="donorbox" 
-          frameborder="0" 
-          scrolling="no"></iframe>
-        <script src="https://donorbox.org/widget.js" paypalExpress="false"></script>
-      `,
-      }}
-    />
+    <div>
+      <iframe
+        src="https://donorbox.org/embed/donate-to-baby-kitty-rescue-committee-1?default_interval=m"
+        name="donorbox"
+        allowpaymentrequest="allowpaymentrequest"
+        seamless="seamless"
+        className="w-full h-[900px] max-w-[500px] min-w-[250px] max-h-none"
+        allow="payment"
+      />
+    </div>
   );
 };
 

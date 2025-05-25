@@ -6,13 +6,12 @@ const Home: React.FC = () => {
   return (
     <div>
       <Header />
-      <figure>
-        <img />
-      </figure>
-      <main>
-        <div>
+      <section className="h-screen bg-[url('/kittens_in_basket.jpg')] grayscale-80 bg-cover bg-center bg-fixed"></section>
+      <main className="bg-white">
+        <section className="bg-[#f5f2f8] p-70 mt-[-100px]"></section>
+        <section className="bg-white flex flex-row p-[10px] justify-center">
           <p>Insert embedded video here!</p>
-        </div>
+        </section>
         <div className="flex flex-row gap-[15px] bg-[#f5f2f8] w-full pt-[15px] pb-[30px] px-[100px]">
           <div className="bg-white shadow-xs px-[15px] py-[15px]">
             <h3>Community Partnership</h3>
