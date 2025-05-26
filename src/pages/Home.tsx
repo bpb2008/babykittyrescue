@@ -10,7 +10,13 @@ const Home: React.FC = () => {
       <main className="bg-white">
         <section className="bg-[#f5f2f8] p-70 mt-[-100px]"></section>
         <section className="bg-white flex flex-row p-[10px] justify-center">
-          <p>Insert embedded video here!</p>
+          <iframe
+            src="https://www.youtube.com/embed/vgEJJ72DXio"
+            title="Baby Kitty Rescue Committee Mission"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="w-4/5 h-[600px] border-none"
+          ></iframe>
         </section>
         <div className="flex flex-row gap-[15px] bg-[#f5f2f8] w-full pt-[15px] pb-[30px] px-[100px]">
           <div className="bg-white shadow-xs px-[15px] py-[15px]">
