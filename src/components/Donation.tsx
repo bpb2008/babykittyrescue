@@ -1,12 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 const Donation: React.FC = () => {
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://donorbox.org/widget.js";
     script.setAttribute("paypalExpress", "false");
     script.async = true;
     document.body.appendChild(script);
+
+    if (iframeRef.current) {
+      iframeRef.current.setAttribute("seamless", "");
+      iframeRef.current.setAttribute("allowpaymentrequest", "");
+    }
 
     return () => {
       document.body.removeChild(script);
@@ -18,10 +25,9 @@ const Donation: React.FC = () => {
       <iframe
         src="https://donorbox.org/embed/donate-to-baby-kitty-rescue-committee-1?default_interval=m"
         name="donorbox"
-        allowpaymentrequest="allowpaymentrequest"
-        seamless="seamless"
-        className="w-full h-[900px] max-w-[500px] min-w-[250px] max-h-none"
         allow="payment"
+        title="Donate to Baby Kitty Rescue Committee"
+        className="w-full h-[900px] max-w-[500px] min-w-[250px] max-h-none"
       />
     </div>
   );
