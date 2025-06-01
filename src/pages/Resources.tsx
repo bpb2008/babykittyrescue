@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import Newsletter from "../components/Newsletter";
 
 const Resources: React.FC = () => {
   return (
@@ -60,6 +61,9 @@ const Resources: React.FC = () => {
                 <li>YT</li>
                 <li>TW</li>
               </ul>
+            </div>
+            <div className="w-[300px] mt-[50px]">
+              <Newsletter />
             </div>
           </aside>
         </main>
