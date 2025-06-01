@@ -14,6 +14,10 @@ const Resources: React.FC = () => {
           <div className="flex flex-col gap-[30px]">
             <Link to="/resources/feeding">
               <div className="flex flex-col w-[500px] px-[50px] py-[50px]">
+                <img
+                  src="/kitten_in_hand2.jpg"
+                  alt="striped kitten being held by a human"
+                />
                 <h3 className="text-[#221a20] text-[20px] font-bold mb-[20px] font-stretch-110%">
                   WHAT TO FEED A NEWBORN KITTEN?
                 </h3>
@@ -26,6 +30,10 @@ const Resources: React.FC = () => {
             </Link>
             <Link to="/resources/care">
               <div className="flex flex-col w-[500px] px-[50px] py-[50px]">
+                <img
+                  src="/kitten_in_hand.jpg"
+                  alt="tiny cat in the palm of a human hand"
+                />
                 <h3 className="text-[#221a20] text-[20px] font-bold mb-[20px] font-stretch-110%">
                   NEONATAL CARE FOR KITTENS
                 </h3>
@@ -38,6 +46,10 @@ const Resources: React.FC = () => {
             </Link>
             <Link to="/resources/socialize">
               <div className="flex flex-col w-[500px] px-[50px] py-[50px]">
+                <img
+                  src="/neonatal.jpg"
+                  alt="a brown kitten held in human hands"
+                />
                 <h3 className="text-[#221a20] text-[20px] font-bold mb-[20px] font-stretch-110%">
                   HELP KITTENS SOCIALIZE
                 </h3>
@@ -49,8 +61,12 @@ const Resources: React.FC = () => {
               </div>
             </Link>
           </div>
-          <aside>
+          <aside className="bg-[#f5f2f8] bg-fixed bg-[length:100%_100%] p-[30px] w-[360px]">
             <div>
+              <img
+                src="kitten_handoff.jpg"
+                alt="a human child handing a tiny kitten to an adult"
+              />
               <img
                 src="/Baby_Kitty_Logo_Transparent.png"
                 className="w-[170px] h-[170px]"
