@@ -5,18 +5,35 @@ const Newsletter: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (email || !/\S+@\S+\.\S+/.test(email)) {
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
       setError("Please enter a valid email address.");
       return;
     }
 
-    //Apparently this is where the Mailchimp or whatever logic goes!
-    console.log("Email submitted:", email);
-    setSubmitted(true);
-    setError("");
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        body: JSON.stringify({ email }),
+        headers: { "Content-Type": "application/json" },
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "There was an error subscribing.");
+      }
+      setSubmitted(true);
+      setError("");
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        setError(error.message || "Failed to subscribe.:");
+      } else {
+        setError("Failed to subscribe.");
+      }
+    }
   };
 
   return (
@@ -34,17 +51,17 @@ const Newsletter: React.FC = () => {
           Thanks for signing up! 🐾
         </p>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="flex mt-[18px]">
           <input
             type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="border border-[#221a20] bg-[#f5f2f8] px-[20px] py-[10px] mt-[18px]"
+            className="border border-[#221a20] bg-[#f5f2f8] px-[20px] py-[10px] flex-1 rounded-l-md"
           />
           <button
             type="submit"
-            className="bg-[#221a20] text-white px-[20px] py-[10px]"
+            className="bg-[#221a20] text-white px-[20px] py-[10px] flex items-center justify-center rounded-r-md"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

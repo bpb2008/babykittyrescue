@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import AboveFooter from "./AboveFooter";
+import { Facebook, Instagram, Youtube } from "lucide-react";
 
 const Footer: React.FC = () => {
   const handleScrollToTop = () => {
@@ -12,13 +14,25 @@ const Footer: React.FC = () => {
   return (
     <div>
       <AboveFooter />
-      <footer className="flex flex-row bg-[#221a20] text-white py-[20px] pl-[50px] pr-[20px] justify-between">
+      <footer className="flex flex-col md:flex-row bg-[#221a20] text-white py-6 px-6 md:pl-[50px] md:pr-[20px] justify-between items-center gap-6 md:gap-0 text-center md:text-left">
         <p>Copyright 2021 Baby Kitty Rescue. All Rights Reserved.</p>
-        <div className="flex flex-row gap-[30px]">
-          <ul className="flex flex-row gap-[15px]">
-            <li>FB</li>
-            <li>IG</li>
-            <li>YT</li>
+        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-[30px]">
+          <ul className="flex gap-[15px]">
+            <li>
+              <Link to="https://www.facebook.com/babykittyrescue">
+                <Facebook />
+              </Link>
+            </li>
+            <li>
+              <Link to="https://www.instagram.com/babykittyrescue">
+                <Instagram />
+              </Link>
+            </li>
+            <li>
+              <Link to="https://www.youtube.com/@babykittyrescuecommittee6888">
+                <Youtube />
+              </Link>
+            </li>
           </ul>
           <button
             onClick={handleScrollToTop}
@@ -39,7 +53,6 @@ const Footer: React.FC = () => {
                 d="m4.5 15.75 7.5-7.5 7.5 7.5"
               />
             </svg>
-            {/* Needs to link to top of page */}
           </button>
         </div>
       </footer>
