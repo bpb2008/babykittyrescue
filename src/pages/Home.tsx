@@ -24,22 +24,43 @@ const Home: React.FC = () => {
             {
               title: "Community Partnership",
               desc: "We collaborate with other animal rescue & shelters in the Puget Sound region to focus on rescuing only the homeless newborn kittens.",
+              icon: (
+                <img
+                  src="/cat.jpg"
+                  className="w-[300px] h-[100px] mb-3 mx-auto md:mx-0"
+                />
+              ),
             },
             {
               title: "Care",
               desc: "We provide specialized neonatal care to the orphaned kittens until they grow from infants to more than 8-week old, adoptable kittens.",
+              icon: (
+                <img
+                  src="/cat.jpg"
+                  className="w-[300px] h-[100px] mb-3 mx-auto md:mx-0"
+                />
+              ),
             },
             {
               title: "Furever Home",
               desc: "We also create socializing opportunities for these little ones to prepare them for a gentle transition to their furever homes.",
+              icon: (
+                <img
+                  src="/cat.jpg"
+                  className="w-[300px] h-[100px] mb-3 mx-auto md:mx-0"
+                />
+              ),
             },
-          ].map(({ title, desc }) => (
+          ].map(({ title, desc, icon }) => (
             <div
               key={title}
-              className="bg-white shadow-xs px-6 py-6 rounded-md text-center md:text-left md:w-1/3"
+              className="flex flex-row gap-2 bg-white shadow-xs px-6 py-6 rounded-md text-center md:text-left md:w-1/3"
             >
-              <h3 className="font-bold mb-2">{title}</h3>
-              <p>{desc}</p>
+              <div>{icon}</div>
+              <div>
+                <h3 className="font-bold mb-2">{title}</h3>
+                <p>{desc}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -52,20 +73,40 @@ const Home: React.FC = () => {
               {
                 title: "Kitten Care & Medical Support",
                 desc: "With your support, we can provide the best quality care for our kittens. This includes: medical expenses, kitten milk replacement (KMR) formula, kitten food, litter, and toys.",
+                icon: (
+                  <img
+                    src="/care_cat.jpg"
+                    className="w-[200px] h-[100px] mb-3 mx-auto md:mx-0 rounded-full"
+                  />
+                ),
               },
               {
                 title: "Shelter Housing & Supplies",
                 desc: "Additionally, your generous support will help us keep our facilities up and running. This will ensure that we can provide a safe space for rescued kittens.",
+                icon: (
+                  <img
+                    src="/community_cat.jpg"
+                    className="w-[200px] h-[100px] mb-3 mx-auto md:mx-0 rounded-full"
+                  />
+                ),
               },
               {
                 title: "Operations & Equipment",
                 desc: "Lastly, your donation can help us to purchase equipment and hire staff to continue improving our operations and ensuring that we can expand to help rescue more kittens.",
+                icon: (
+                  <img
+                    src="/hearthand.jpg"
+                    className="w-[200px] h-[100px] mb-3 mx-auto md:mx-0 rounded-full"
+                  />
+                ),
               },
-            ].map(({ title, desc }, index) => (
-              <div key={index} className="mb-8 last:mb-0">
-                {/* <img className="mx-auto mb-4" alt="" /> Placeholder */}
-                <h3 className="font-bold mb-2">{title}</h3>
-                <p>{desc}</p>
+            ].map(({ title, desc, icon }, index) => (
+              <div key={index} className="flex flex-row gap-4 mb-8 last:mb-0">
+                <div>{icon}</div>
+                <div>
+                  <h3 className="font-bold mb-2">{title}</h3>
+                  <p>{desc}</p>
+                </div>
               </div>
             ))}
           </div>

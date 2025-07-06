@@ -6,7 +6,7 @@ const Adopt: React.FC = () => {
   return (
     <div className="flex flex-col">
       <Header />
-      <section className="h-screen bg-[url('/kittens_in_basket.jpg')] grayscale-80 bg-cover bg-center bg-fixed"></section>
+      <section className="h-screen bg-[url('/adopt_pic.jpg')] grayscale-80 bg-cover bg-center bg-fixed"></section>
       <div className="flex flex-col items-center">
         <main className="bg-[#f5f2f8] w-full flex flex-col items-center py-[100px]">
           <div className="flex flex-col w-[300px] bg-white px-[50px] py-[50px] shadow-lg">

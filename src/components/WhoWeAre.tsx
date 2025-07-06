@@ -4,8 +4,8 @@ const WhoWeAre: React.FC = () => {
   return (
     <div className="bg-[#f5f2f8] px-6 md:px-[50px] pt-[30px] pb-[50px]">
       <img
-        src="/woman_feeding_kitten.jpg"
-        alt="Woman feeding kitten with a bottle"
+        src="/about_us_pic.jpg"
+        alt="Woman holding kitten, standing next to a cage full of kittens."
         className="w-[400px] mx-auto mb-4"
       />
       ;
