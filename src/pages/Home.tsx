@@ -85,7 +85,7 @@ const Home: React.FC = () => {
                 desc: "Additionally, your generous support will help us keep our facilities up and running. This will ensure that we can provide a safe space for rescued kittens.",
                 icon: (
                   <img
-                    src="/Baby_Kitty_Logo.png"
+                    src="/community_cat.jpg"
                     className="w-[200px] h-[100px] mb-3 mx-auto md:mx-0 rounded-full"
                   />
                 ),
