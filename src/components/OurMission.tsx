@@ -4,7 +4,7 @@ const OurMission: React.FC = () => {
   return (
     <div className="bg-white px-6 md:px-[50px] pt-[30px] pb-[50px]">
       <img
-        src="/woman_feeding_kitten.jpg"
+        src="/babykittyhomepic.jpg"
         alt="Woman feeding kitten with a bottle"
         className="w-[400px] h-[80] mx-auto mb-4"
       />

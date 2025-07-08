@@ -1,12 +1,12 @@
 export const blogPosts = [
   {
     title: "Neonatal Care for Kittens",
-    slug: "/resources/neonatal-care",
+    slug: "/resources/care",
     date: "August 3, 2021",
   },
   {
     title: "Help Kittens Socialize",
-    slug: "/resources/socializing-kittens",
+    slug: "/resources/socialize",
     date: "August 3, 2021",
   },
   {
