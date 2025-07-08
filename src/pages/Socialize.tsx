@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ShareButtons from "../components/ShareButtons";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { blogPosts } from "../data/blogPosts";
 
 const Care: React.FC = () => {
   return (
@@ -79,7 +81,7 @@ const Care: React.FC = () => {
               <div className="mt-10">
                 <ShareButtons
                   title="Help Kittens Socialize"
-                  url="https://babykittyrescue.vercel.app/resources/socialize"
+                  url="https://babykittyrescue.netlify.app/resources/socialize"
                 />
               </div>
             </article>
@@ -88,10 +90,17 @@ const Care: React.FC = () => {
             <aside className="w-full lg:w-1/3">
               <div className="bg-white p-6 shadow-md rounded-md">
                 <h2 className="font-bold text-lg mb-4">Recent Posts</h2>
-                <ul className="space-y-2 text-blue-700">
-                  <li>• Neonatal Care for Kittens</li>
-                  <li>• Help Kittens Socialize</li>
-                  <li>• Our Mission</li>
+                <ul className="space-y-2 text-black">
+                  {blogPosts.map((post) => (
+                    <li key={post.slug}>
+                      <Link
+                        to={post.slug}
+                        className="hover:text-[#DCCAE3] transition-colors duration-200"
+                      >
+                        • {post.title}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </aside>
