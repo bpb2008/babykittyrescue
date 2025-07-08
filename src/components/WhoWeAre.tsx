@@ -8,7 +8,6 @@ const WhoWeAre: React.FC = () => {
         alt="Woman holding kitten, standing next to a cage full of kittens."
         className="w-[400px] mx-auto mb-4"
       />
-      ;
       <div className="flex flex-col md:flex-row gap-10">
         <h2 className="font-bold text-2xl w-full md:w-1/3 text-center md:text-left">
           {" "}

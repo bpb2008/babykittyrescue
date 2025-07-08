@@ -14,7 +14,7 @@ const Newsletter: React.FC = () => {
     }
 
     try {
-      const res = await fetch("/api/subscribe", {
+      const res = await fetch("/.netlify/functions/subscribe", {
         method: "POST",
         body: JSON.stringify({ email }),
         headers: { "Content-Type": "application/json" },
