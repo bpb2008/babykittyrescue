@@ -100,15 +100,20 @@ const Home: React.FC = () => {
                   />
                 ),
               },
-            ].map(({ title, desc, icon }, index) => (
+            ].map(({ title, desc }, index) => (
               <div key={index} className="flex flex-row gap-4 mb-8 last:mb-0">
-                <div>{icon}</div>
+                {/* <div>{icon}</div> */}
                 <div>
                   <h3 className="font-bold mb-2">{title}</h3>
                   <p>{desc}</p>
                 </div>
               </div>
             ))}
+            <img
+              src="/babykittyhomepic.jpg"
+              alt="Kittens in basket"
+              className="w-[400px]"
+            />
           </div>
         </div>
       </main>
