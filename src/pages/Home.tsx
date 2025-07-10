@@ -7,7 +7,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <Header />
-      <section className="h-screen bg-[url('/kittens_in_basket.jpg')] grayscale-80 bg-cover bg-center bg-fixed" />
+      <section className="h-[500px] bg-[url('/kittens_in_basket.jpg')] grayscale-80 bg-cover bg-center bg-fixed" />
       <main className="bg-white">
         <section className="bg-[#f5f2f8] p-16 mt-[-100px]" />
         <section className="bg-white flex px-4 py-8 justify-center">

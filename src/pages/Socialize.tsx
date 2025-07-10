@@ -5,12 +5,12 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { blogPosts } from "../data/blogPosts";
 
-const Care: React.FC = () => {
+const Socialize: React.FC = () => {
   return (
     <div>
       <Header />
       <div className="flex flex-col items-center">
-        <section className="h-screen bg-[url('/kitten_in_hand2.jpg')] bg-cover bg-center bg-fixed grayscale-80 w-full" />
+        <section className="h-[500px] bg-[url('/kitten_in_hand2.jpg')] bg-cover bg-center bg-fixed grayscale-80 w-full" />
         <main className="bg-[#f5f2f8] w-full flex flex-col items-center px-4 lg:px-8 py-10">
           <div className="w-full max-w-screen-lg flex flex-col lg:flex-row gap-10">
             {/* Article */}
@@ -112,4 +112,4 @@ const Care: React.FC = () => {
   );
 };
 
-export default Care;
+export default Socialize;
