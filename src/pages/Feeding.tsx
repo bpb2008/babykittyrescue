@@ -10,7 +10,7 @@ const Feeding: React.FC = () => {
     <div>
       <Header />
       <div className="flex flex-col items-center">
-        <section className="h-screen bg-[url('/kitten_in_hand2.jpg')] bg-cover bg-center bg-fixed grayscale-80 w-full" />
+        <section className="h-[500px] bg-[url('/kitten_in_hand2.jpg')] bg-cover bg-center bg-fixed grayscale-80 w-full" />
         <main className="bg-[#f5f2f8] w-full flex flex-col items-center px-4 lg:px-8 py-10">
           <div className="w-full max-w-screen-lg flex flex-col lg:flex-row gap-10">
             <article className="bg-white p-6 md:p-10 shadow-md rounded-md flex-1">
