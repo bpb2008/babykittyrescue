@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { blogPosts } from "../data/blogPosts";
 
-const Care: React.FC = () => {
+const Socialize: React.FC = () => {
   return (
     <div>
       <Header />
@@ -112,4 +112,4 @@ const Care: React.FC = () => {
   );
 };
 
-export default Care;
+export default Socialize;
