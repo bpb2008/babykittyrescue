@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
   const navLinks = [
     { to: "/", label: "HOME" },
     { to: "/about", label: "ABOUT US" },
-    { to: "/adopt", label: "ADOPT" },
+    // { to: "/adopt", label: "ADOPT" },
     { to: "/volunteer", label: "VOLUNTEER" },
     { to: "/resources", label: "RESOURCES" },
     { to: "/donate", label: "DONATE" },

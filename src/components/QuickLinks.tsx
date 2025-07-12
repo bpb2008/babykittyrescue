@@ -11,9 +11,9 @@ const QuickLinks: React.FC = () => {
         <li className="hover:text-[#DCCAE3]">
           <Link to="/about">About Us</Link>
         </li>
-        <li className="hover:text-[#DCCAE3]">
+        {/* <li className="hover:text-[#DCCAE3]">
           <Link to="/adopt">Adopt</Link>
-        </li>
+        </li> */}
         <li className="hover:text-[#DCCAE3]">
           <Link to="/volunteer">Volunteer</Link>
         </li>
